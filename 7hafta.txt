@@ -1,0 +1,54 @@
+select*from sales.orders
+select*from sales.customers
+SELECT SUM(quantity)/COUNT(quantity) as ortalama
+FROM Production.stocks;
+select*from
+
+
+
+//joinler
+SELECT *
+FROM sales.stores
+INNER JOIN sales.orders
+ON sales.stores.store_id = sales.orders.store_id;
+
+SELECT *
+FROM production.stocks
+LEFT JOIN production.products
+ON  production.stocks.product_id =production.products .product_id;
+
+SELECT *
+FROM production.stocks
+RIGHT  JOIN production.products
+ON  production.stocks.product_id =production.products .product_id;
+
+SELECT *
+FROM sales.stores
+FULL OUTER JOIN sales.orders
+ON sales.stores.store_id = sales.orders.store_id;
+
+SELECT *
+FROM sales.stores
+FULL OUTER JOIN sales.orders
+ON sales.stores.store_id = sales.orders.store_id;
+
+
+
+
+//iliskisel cebir
+SELECT        *
+FROM            sales.order_items
+
+SELECT        *
+FROM            sales.order_items
+WHERE        (list_price > 500)
+σlist_price > 500 (sales.order_items)
+
+SELECT        product_id, discount
+FROM            sales.order_items
+WHERE        (list_price > 500)
+π product_id, discount  (σlist_price > 500 (sales.order_items))
+
+
+
+Gulsenem Hamzayeva
